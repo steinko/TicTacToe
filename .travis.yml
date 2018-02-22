@@ -1,11 +1,10 @@
-language: node_js
-node_js:
-  - "node"
-  - "8"
-  
-  addons:
+addons:
   sonarcloud:
     organization: "steinko-github" # the key of the org you chose at step #
 script:
   # other script steps might be done before running the actual analysis
   - sonar-scanner
+language: node_js
+node_js:
+  - "node"
+  - "8"
