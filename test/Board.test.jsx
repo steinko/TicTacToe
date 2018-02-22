@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { shallow, mount, render } from 'enzyme';
+import { shallow } from 'enzyme';
 import { configure } from 'enzyme';
 import Adapter from 'enzyme-adapter-react-16';
 import Board from '../src/Board';
@@ -38,7 +38,7 @@ configure({ adapter: new Adapter() });
           });
       
       it('should  have classes board row ', () => {
-          const  board = render( <Board /> );
+          const  board = shallow( <Board /> );
           expect(board.find('div.board-row').length).toBe(3);
          
               
