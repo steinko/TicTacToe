@@ -3,7 +3,7 @@ addons:
    
 script:
   # other script steps might be done before running the actual analysis
-  - sonar-scanner  -Dsonar.projectKey=TicTacToe -Dsonar.organization=steinko-github -Dsonar.sources=src,test -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=a28a5b9a8b11ac6461e364d2124186fe0b3a4920
+  - sonar-scanner  -Dsonar.projectKey=TicTacToe -Dsonar.organization=steinko-github -Dsonar.sources=src,test -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6472ac35c070752487408fd8c946cca6b536eec2
 language: node_js
 node_js:
   - "node"
