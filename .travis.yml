@@ -1,11 +1,11 @@
 addons:
-  sonarcloud:
+  sonarcloud: 
     organization: "steinko-github" # the key of the org you chose at step #
     projectKey: "TicTacToe2"
     sources: "src,test"
 script:
   # other script steps might be done before running the actual analysis
-  - sonar-scanner
+  - sonar-scanner -X
 language: node_js
 node_js:
   - "node"
