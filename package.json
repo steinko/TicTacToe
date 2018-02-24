@@ -3,7 +3,8 @@
   "version": "0.1.0",
   "private": true,
   "jest":  { "testMatch": ["**/test/**/*.js?(x)"],
-             "collectCoverage":true},
+             "collectCoverage":true,
+              "coverageDirectory": "./coverage"},
   "dependencies": {
     "chromedriver": "^2.35.0",
     "jest-cli": "^22.3.0",
