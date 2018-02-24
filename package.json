@@ -4,7 +4,7 @@
   "private": true,
   "jest":  { "testMatch": ["**/test/**/*.js?(x)"],
              "collectCoverage":true,
-              "coverageDirectory": "./coverage"},
+              "coverageDirectory": "coverage"},
   "dependencies": {
     "chromedriver": "^2.35.0",
     "jest-cli": "^22.3.0",
