@@ -8,7 +8,7 @@ before_script:
 script:
   # other script steps might be done before running the actual analysis
   - sonar-scanner  -Dsonar.projectKey=TicTacToe -Dsonar.organization=steinko-github -Dsonar.sources=src,test -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6472ac35c070752487408fd8c946cca6b536eec2
-  - npm test
+  - npm test --coverage
   - cypress run --record --key a1319fd9-2c6e-4888-8f02-e62f02b5001b
   
 language: node_js
