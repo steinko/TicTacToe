@@ -2,7 +2,8 @@
   "name": "tic-tac-toe",
   "version": "0.1.0",
   "private": true,
-  "jest":  { "testMatch": ["**/test/**/*.js?(x)"] },
+  "jest":  { "testMatch": ["**/test/**/*.js?(x)"],
+             "collectCoverage":true},
   "dependencies": {
     "chromedriver": "^2.35.0",
     "jest-cli": "^22.3.0",
