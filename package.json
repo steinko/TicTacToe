@@ -19,8 +19,9 @@
       "plugin:jsx-a11y/recommended" 
     ],
     "plugins": [
-      "jsx-a11y"
-    ],
+      "jsx-a11y",
+      "react"
+      ],
     "rules": {
       "no-trailing-spaces": "off",
       "padded-blocks":"off",
