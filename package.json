@@ -2,16 +2,48 @@
   "name": "tic-tac-toe",
   "version": "0.1.0",
   "private": true,
-  "jest":  { "testMatch": ["**/test/**/*.js?(x)"],
-             "collectCoverage":true,
-              "coverageDirectory": "coverage"},
+  "eslintConfig": {
+    "env": {
+      "es6": true
+    },
+    "parserOptions": {
+      "ecmaVersion": 8,
+      "sourceType": "module",
+      "ecmaFeatures": {
+        "jsx": true
+      }
+    },
+    "extends": [
+      "standard",
+      "react-app",
+      "plugin:jsx-a11y/recommended" 
+    ],
+    "plugins": [
+      "jsx-a11y"
+    ]
+  },
+  "jest": {
+    "testMatch": [
+      "**/test/**/*.js?(x)"
+    ],
+    "collectCoverage": true,
+    "coverageDirectory": "coverage",
+    "coverageThreshold": {
+      "global": {
+        "branches": 100,
+        "functions": 100,
+        "lines": 100,
+        "statements": 100
+      }
+    }
+  },
   "dependencies": {
     "chromedriver": "^2.35.0",
     "jest-cli": "^22.3.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-scripts": "1.1.1",
-    "selenium-webdriver": "^4.0.0-alpha.1" 
+    "selenium-webdriver": "^4.0.0-alpha.1"
   },
   "scripts": {
     "start": "react-scripts start",
@@ -21,6 +53,7 @@
     "cypress:open": "cypress open"
   },
   "devDependencies": {
+    "babel-eslint": "^7.2.3",
     "babel-jest": "^22.2.2",
     "babel-preset-env": "^1.6.1",
     "babel-preset-react": "^6.24.1",
@@ -29,13 +62,16 @@
     "enzyme-adapter-react-16": "^1.1.1",
     "eslint": "^4.18.1",
     "eslint-config-google": "^0.9.1",
+    "eslint-config-react-app": "^2.1.0",
     "eslint-config-standard": "^11.0.0",
+    "eslint-plugin-flowtype": "^2.46.1",
     "eslint-plugin-import": "^2.9.0",
+    "eslint-plugin-jsx-a11y": "^6.0.3",
     "eslint-plugin-node": "^6.0.1",
     "eslint-plugin-promise": "^3.6.0",
+    "eslint-plugin-react": "^7.7.0",
     "eslint-plugin-standard": "^3.0.1",
     "jest": "^22.3.0",
     "react-test-renderer": "^16.2.0"
   }
- 
 }
