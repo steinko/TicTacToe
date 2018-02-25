@@ -6,6 +6,7 @@ addons:
 before_script:
 - npm start -- --silent &
 script:
+- npm run lint
 - npm test
 - sonar-scanner  -Dsonar.projectKey=TicTacToe -Dsonar.organization=steinko-github
   -Dsonar.sources=src,test -Dsonar.host.url=https://sonarcloud.io -Dsonar.login=6472ac35c070752487408fd8c946cca6b536eec2
