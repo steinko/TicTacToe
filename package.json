@@ -54,7 +54,7 @@
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
-    "lint": "./node_modules/.bin/eslint  src/** test/**",
+    "lint": "./node_modules/.bin/eslint  src/** test/** ",
     "test": "jest",
     "eject": "react-scripts eject",
     "cypress:open": "cypress open"

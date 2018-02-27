@@ -5,18 +5,27 @@ import Square from '../src/Square'
 
 configure({ adapter: new Adapter() })
 
-describe('To test square', () => {
-  var square
-  beforeEach(() => { square = shallow(<Square value = {1}/>) })
+var handleClick
+
+describe('A Square function', () => {
+  var square 
+    
+  beforeEach(() => { 
+    handleClick = jest.fn()
+    square = shallow(<Square value={'X'} onClick={() => handleClick}/>) 
+  })
+    
+  it('shoul be classified as square', () => {
+    expect(square.find('.square').exists()).toBeTruthy()
+  })
   
-  it('change the code to pass a value prop to the Square', () => {
-    square.setState({value: 1})
-    expect(square.state().value).toBe(1)
+  it('shoul contain a button', () => {
+    expect(square.find('button').exists()).toBeTruthy()
   })
             
-  it('change to x on click', () => {
-    square.find('.square').simulate('click')
-    expect(square.state().value).toBe('X')
+  xit('should call handleClick function when it is cliced on', () => {
+    square.find('button').simulate('click')
+    expect(handleClick).toHaveBeenCalled()  
   })
   
 })

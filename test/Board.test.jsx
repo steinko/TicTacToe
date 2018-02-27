@@ -8,21 +8,23 @@ import Square from '../src/Square'
 
 configure({ adapter: new Adapter() })
 
-describe('To test board', () => {
+var boardInst
+  
+describe('A board', () => {
   var board
-  beforeEach(() => { board = shallow(<Board />) })
+  beforeEach(() => { board = shallow(<Board />); boardInst = board.instance() })
     
   it('should contain a div tag ', () => { 
     expect(board.find('div').exists()).toBeTruthy()
   })
       
-  it('should return a square ', () => {
-    const board = new Board()
-    let result = board.renderSquare(1)
+  it('should return a square when methode rednder square is called ', () => {
+    let result = boardInst.renderSquare(1)
     expect(result instanceof Square)
+    expect(result)
   })  
       
-  it('should return a square ', () => {
+  it('should conatin a class status ', () => {
     expect(board.find('div.status').exists()).toBeTruthy()
   })
       
@@ -34,14 +36,29 @@ describe('To test board', () => {
     expect(board.find('div.board-row').length).toBe(3)      
   })
       
-  it('should  call rendersqare fro each square on the baord ', () => {
-    const board = new Board()
-    const spy = jest.spyOn(board, 'renderSquare')
-    board.render()
+  it('should  call rendersqare fro each square on the baord ', () => {  
+    const spy = jest.spyOn(boardInst, 'renderSquare')
+    boardInst.render()
     expect(spy).toHaveBeenCalledTimes(9)
          
     spy.mockReset()
     spy.mockRestore()        
+  })
+  
+  it('should deliver sqare state x then sqaure state o', () => { 
+    boardInst.handleClick(1)
+    expect(board.state().squares[1]).toBe('X')
+    boardInst.handleClick(2)
+    expect(board.state().squares[2]).toBe('O')
+  })
+  
+  it('should deliver sqare state x then sqaure state o', () => {
+    let square = boardInst.renderSquare(1)
+    square.props.onClick()
+    expect(board.state().squares[1]).toBe('X')
+    square = boardInst.renderSquare(2)
+    square.props.onClick()
+    expect(board.state().squares[2]).toBe('O')  
   })
        
 })
