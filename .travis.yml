@@ -28,5 +28,5 @@ deploy:
   app: tictactoesko
   run:
      -npm install cypress --save-dev
-     -npm start --silent 
+     -npm start -- --silent & 
      -$(npm bin)/cypress run --record --key a1319fd9-2c6e-4888-8f02-e62f02b5001b
