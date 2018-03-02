@@ -30,8 +30,7 @@
     "lint": "./node_modules/.bin/eslint  src/** test/** ",
     "test": "jest",
     "eject": "react-scripts eject",
-    "cypress:open": "cypress open",
-    "postinstall": "npm run cypress open"
+    "cypress:open": "cypress open"
   },
   "devDependencies": {
     "babel-jest": "^22.2.2",
