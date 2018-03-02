@@ -11,6 +11,7 @@ before_script:
 - npm install eslint-plugin-flowtype --save-dev
 - npm install eslint-config-standard --save-dev
 - npm install eslint-plugin-node --save-dev
+- npm i eslint-plugin-promise@latest --save-dev
 - npm start -- --silent &
 script:
 - npm run lint
