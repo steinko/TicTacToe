@@ -12,6 +12,7 @@ before_script:
 - npm install eslint-config-standard --save-dev
 - npm install eslint-plugin-node --save-dev
 - npm i eslint-plugin-promise@latest --save-dev
+- npm i eslint-plugin-standard@latest --save-dev
 - npm start -- --silent &
 script:
 - npm run lint
