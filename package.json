@@ -17,32 +17,7 @@
       }
     }
   },
-  "eslintConfig": {
-    "env": {
-      "es6": true
-    },
-    "parserOptions": {
-      "ecmaVersion": 8,
-      "sourceType": "module",
-      "ecmaFeatures": {
-        "jsx": true
-      }
-    },
-    "extends": [
-      "standard",
-      "react-app",
-      "plugin:jsx-a11y/recommended" 
-    ],
-    "plugins": [
-      "jsx-a11y",
-      "react"
-      ],
-    "rules": {
-      "no-trailing-spaces": "off",
-      "padded-blocks":"off",
-      "jsx-a11y/href-no-hash":"off"
-   }
-  },
+  
   "dependencies": {
     
     "react": "^16.2.0",
