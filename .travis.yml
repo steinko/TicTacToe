@@ -4,6 +4,7 @@ node_js:
 addons:
   sonarcloud: 
 before_script:
+- npm i eslint-pluging-jsx-ally --save-dev
 - npm start -- --silent &
 script:
 - npm run lint
